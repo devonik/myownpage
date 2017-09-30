@@ -53,7 +53,7 @@ p {
 
 #hero {
   position: relative;
-   background: url(https://objects-us-west-1.dream.io/moneypacers/wp-content/uploads/2016/06/FullStack-Image.jpg) no-repeat center center fixed; 
+   background: url('./images/pic.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -116,7 +116,6 @@ p {
 }
 
 .logo {
-  width: 50px;
   font-size: 25px;
   color: #8f8f8f;
   text-transform: uppercase;
