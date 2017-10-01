@@ -8,7 +8,7 @@ export class MailService {
 
     sendMail(props) {
         var headers = new Headers();
-        var params = 'name=' + props.name + '&mailAdress=' + props.adress + '&phone=' +props.phone + '&message='+props.message;
+        var params = 'username=' + props.name + '&mailAdress=' + props.adress + '&phone=' +props.phone + '&message='+props.message;
 
         headers.append('Content-Type', 'application/X-www-form-urlencoded');
 
