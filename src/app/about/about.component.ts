@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
   constructor(private mailService: MailService) {
       
   }
-  private sendMail() {
+  public sendMail() {
       this.mailService.sendMail(this.newMail);
   }
   ngOnInit() {
