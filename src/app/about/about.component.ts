@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{MailService} from './mail.service';
+import { MailService } from './mail.service';
 @Component({
   selector: 'about',
   templateUrl: './about.component.html',
@@ -13,11 +13,14 @@ export class AboutComponent implements OnInit {
     phone: "",
     message: ""
   }
-  constructor(private mailService: MailService) { }
-  sendMail(){
-    this.mailService.sendMail(this.newMail);
+  constructor(private mailService: MailService) {
+      
+  }
+  private sendMail() {
+      this.mailService.sendMail(this.newMail);
   }
   ngOnInit() {
   }
+    
 
 }

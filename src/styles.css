@@ -1,4 +1,4 @@
-﻿* {
+* {
   box-sizing: border-box;
 }
 
@@ -53,7 +53,7 @@ p {
 
 #hero {
   position: relative;
-   background: url('./images/pic.jpg') no-repeat center center fixed; 
+   background: url('./images/pic2.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

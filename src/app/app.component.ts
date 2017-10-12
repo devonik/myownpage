@@ -1,4 +1,4 @@
-﻿import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 declare var jquery: any;
 declare var $: any;
 
@@ -8,6 +8,7 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+    private options: any;
     ngOnInit() {
         // Sticky Header
         $(window).scroll(function () {

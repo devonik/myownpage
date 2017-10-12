@@ -1,21 +1,32 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http';
+import { Observable } from "rxjs/Observable";
+import { NotificationsService } from 'angular2-notifications';
 
 @Injectable()
 export class MailService {
 
-    constructor(private http: Http) {}
+    constructor(private http: Http, private _notfication: NotificationsService ) {}
 
-    sendMail(props) {
-        var headers = new Headers();
-        var params = 'username=' + props.name + '&mailAdress=' + props.adress + '&phone=' +props.phone + '&message='+props.message;
+    public sendMail(props){
+        console.log("Send Mail...");
+        //var headers = new Headers();
+        var params = '/' + props.name + '/' + props.adress + '/' + props.message + '/' + props.phone;
 
-        headers.append('Content-Type', 'application/X-www-form-urlencoded');
+        //headers.append('Content-Type', 'application/X-www-form-urlencoded');
 
-        this.http.post('http://localhost:56364/api/Mail/sendmail', params, {headers: headers}).subscribe((data) => {
-            if(data.json().success) {
-                console.log('Sent successfully');
+        this.http.get('http://www.niklas-grieger.de/api/api/mail/sendmail' + params)
+            .subscribe((response) => {
+                console.log(response);
+                this._notfication.success("Erfolg!", "Die Nachricht wurde erfolgreich übermittelt!");
+            },
+            error => {
+                console.log(error);
+                this._notfication.error("Fehler!", "Die Nachricht konnte nicht übermittelt werden");
+            },
+            () => {
+                console.log("Email wurde gesendet!");
             }
-        })
+            );
     }        
 }
