@@ -15,7 +15,7 @@ export class MailService {
 
         //headers.append('Content-Type', 'application/X-www-form-urlencoded');
 
-        this.http.get('http://www.niklas-grieger.de/api/api/mail/sendmail' + params)
+        this.http.get('https://www.niklas-grieger.de/api/api/mail/sendmail' + params)
             .subscribe((response) => {
                 console.log(response);
                 this._notfication.success("Erfolg!", "Die Nachricht wurde erfolgreich übermittelt!");
