@@ -12,9 +12,8 @@ import { AboutComponent } from './about/about.component';
 import { MoreComponent } from './more/more.component';
 import { FooterComponent } from './footer/footer.component';
 import { SimpleNotificationsModule } from 'angular2-notifications';
-//Ediotr
-//Doku: https://www.froala.com/wysiwyg-editor/docs/options
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+//Editor
+import { CKEditorModule } from 'ng2-ckeditor';
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
     HttpModule,
     NgbModule.forRoot(),
     SimpleNotificationsModule.forRoot(),
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot()
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -67,15 +67,28 @@
                         </div>
                     </div>
                     <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls" style="max-width:100%;">
-                            <label>Nachricht&lowast;</label>
-                            <div [froalaEditor]='options'
-                                 placeholder="Nachricht*"
-                                 name="message"
-                                 [(ngModel)]="newMail.message" 
-                                 required
-                                 #message="ngModel">
-                            </div>
+                      <div class="form-group col-xs-12 floating-label-form-group controls" style="max-width:100%;">
+                        <label>Nachricht&lowast;</label>
+                        <!--<div
+         name="message"
+         [(ngModel)]="newMail.message"
+         required
+         #message="ngModel"></div>-->
+                      
+                          <ckeditor [config]="{uiColor: '#527787'}"
+                                    [readonly]="false"
+                                    debounce="500"
+                                    name="message"
+                                    [(ngModel)]="newMail.message" 
+                                    required
+                                    #message="ngModel">
+                          </ckeditor>
+                          <!--(change)="onChange($event)"
+(ready)="onReady($event)"
+(focus)="onFocus($event)"
+(blur)="onBlur($event)"-->
+
+                            
                             <div *ngIf="message.invalid && (message.dirty || message.touched)"
                                  class="alert alert-danger">
 
