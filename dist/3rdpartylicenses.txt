@@ -99,6 +99,10 @@ MIT
 MIT
 MIT
 
+angular-froala-wysiwyg@2.7.0
+MIT
+MIT
+
 @angular/http@4.4.1
 MIT
 MIT

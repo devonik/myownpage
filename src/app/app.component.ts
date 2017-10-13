@@ -8,6 +8,9 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+    notiOptions: any = {
+        timeOut: 3000
+    }
     private options: any;
     ngOnInit() {
         // Sticky Header

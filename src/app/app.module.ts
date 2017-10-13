@@ -12,6 +12,9 @@ import { AboutComponent } from './about/about.component';
 import { MoreComponent } from './more/more.component';
 import { FooterComponent } from './footer/footer.component';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+//Ediotr
+//Doku: https://www.froala.com/wysiwyg-editor/docs/options
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 @NgModule({
   declarations: [
@@ -21,8 +24,7 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
     ProjectsComponent,
     AboutComponent,
     MoreComponent,
-    FooterComponent//,
-    //EmailValidator
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,9 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
-    SimpleNotificationsModule.forRoot()
+    SimpleNotificationsModule.forRoot(),
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

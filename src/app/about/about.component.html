@@ -17,27 +17,25 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="sentMessage" #contactForm="ngForm" >
+            <div class="col-lg-12 col-lg-offset-2">
+                <form name="sentMessage" #contactForm="ngForm">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Name&lowast;</label>
                             <input type="text"
                                    class="form-control"
                                    placeholder="Name*"
-                                   name="name"
+                                   name="username"
                                    required minlength="2"
-                                   [(ngModel)]="newMail.name" #name="ngModel">
+                                   [(ngModel)]="newMail.username" #username="ngModel">
 
-                            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                            <div *ngIf="username.invalid && (username.dirty || username.touched)"
                                class="alert alert-danger">
 
-                            <div *ngIf="name.errors.required">
+                            <div *ngIf="username.errors.required">
                               Name muss gefüllt sein.
                             </div>
-                            <div *ngIf="name.errors.minlength">
+                            <div *ngIf="username.errors.minlength">
                               Name muss mindestens 2 Buchstaben beinhalten.
                             </div>
                           </div>
@@ -46,16 +44,16 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email Addresse</label>
-                            <input type="email" class="form-control" placeholder="Email Addresse*" [(ngModel)]="newMail.adress" name="email" 
-                                   required [email]="true" #email="ngModel">
-                          <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                            <input type="email" class="form-control" placeholder="Email Addresse*" [(ngModel)]="newMail.mailAdress" name="mailAdress" 
+                                   required [email]="true" #mailAdress="ngModel">
+                          <div *ngIf="mailAdress.invalid && (mailAdress.dirty || mailAdress.touched)"
                                class="alert alert-danger">
 
-                            <div *ngIf="email.errors.required">
+                            <div *ngIf="mailAdress.errors.required">
                               Email muss gefüllt sein.
                             </div>
 
-                            <div *ngIf="email.errors.email">
+                            <div *ngIf="mailAdress.errors.email">
                               Email hat das falsche Format
                             </div>
                           </div>
@@ -69,15 +67,15 @@
                         </div>
                     </div>
                     <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <div class="form-group col-xs-12 floating-label-form-group controls" style="max-width:100%;">
                             <label>Nachricht&lowast;</label>
-                            <textarea rows="5" class="form-control"
-                                      placeholder="Nachricht*"
-                                      name="message"
-                                      [(ngModel)]="newMail.message" 
-                                      required
-                                      #message="ngModel">
-                            </textarea>
+                            <div [froalaEditor]='options'
+                                 placeholder="Nachricht*"
+                                 name="message"
+                                 [(ngModel)]="newMail.message" 
+                                 required
+                                 #message="ngModel">
+                            </div>
                             <div *ngIf="message.invalid && (message.dirty || message.touched)"
                                  class="alert alert-danger">
 
