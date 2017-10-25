@@ -2,11 +2,11 @@
   <section class="row dark" id="sec03">
       <div class="content">
         <h1>Über mich</h1>
-        <p>Hallo mein Name ist Niklas Grieger, bin 23 Jahre alt und wohne in der schönen Stadt Hamburg. Außerdem bin ich ein leidenschaftlicher Webentwickler. 
+        <p>Hallo mein Name ist Niklas Grieger, ich bin 23 Jahre alt und wohne in der schönen Stadt Hamburg. Außerdem bin ich ein leidenschaftlicher Webentwickler. 
            Und was bringt mehr Freude als sein Hobby zum Beruf zu machen :) Bereits in der Gesamtschule, wo ich meinen Realschulabschluss gemacht habe hat mich dieses Gebiet sehr interessiert.
            Direkt nach der Schule wollte ich unbedingt etwas in dem IT Bereich lernen und ausüben. Dann habe ich die Berufliche Schule Farmsen (G16) 2 Jahre lang besucht, und dort meine leidenschaft für die Webentwicklung gefunden, damals nur einfaches HTML, CSS und PHP.
-           Dort habe ich den Abschluss "Technischer Assistent für Informatik" gemacht. In der selben Schule (G16) habe ich dann mein Fachabi mit Fachrichtung Technik gemacht.
-           Direkt danach habe ich im Jahre 2014 die Ausbildung zum Fachinformatik mit Schwerpunkt Anwendungsentwicklung anfangen.
+           Dort habe ich den Abschluss "Technischer Assistent für Informatik" gemacht. In der selben Schule (G16) habe ich dann mein Fachabi in Fachrichtung Technik gemacht.
+           Direkt danach habe ich im Jahre 2014 die Ausbildung zum Fachinformatiker mit Schwerpunkt Anwendungsentwicklung angefangen.
         </p>
       </div>
       <div class="content">
@@ -69,12 +69,6 @@
                     <div class="row control-group">
                       <div class="form-group col-xs-12 floating-label-form-group controls" style="max-width:100%;">
                         <label>Nachricht&lowast;</label>
-                        <!--<div
-         name="message"
-         [(ngModel)]="newMail.message"
-         required
-         #message="ngModel"></div>-->
-                      
                           <ckeditor [config]="{uiColor: '#527787'}"
                                     [readonly]="false"
                                     debounce="500"
@@ -83,12 +77,6 @@
                                     required
                                     #message="ngModel">
                           </ckeditor>
-                          <!--(change)="onChange($event)"
-(ready)="onReady($event)"
-(focus)="onFocus($event)"
-(blur)="onBlur($event)"-->
-
-                            
                             <div *ngIf="message.invalid && (message.dirty || message.touched)"
                                  class="alert alert-danger">
 

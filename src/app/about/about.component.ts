@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MailService } from './mail.service';
+
 @Component({
   selector: 'about',
   templateUrl: './about.component.html',
@@ -25,7 +26,6 @@ export class AboutComponent implements OnInit {
     message: ""
   }
   constructor(private mailService: MailService) {
-      
   }
   public sendMail() {
       this.mailService.sendMail(this.newMail);
