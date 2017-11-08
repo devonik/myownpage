@@ -53,10 +53,12 @@ p {
 
 #hero {
   position: relative;
-   background: url('./images/pic_test.png') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a7c7dc+21,a7c7dc+23,85b2d3+76 */
+  /*background-color: rgb(17,26,41);*/
+  background: -webkit-linear-gradient(to right, rgb(14,31,51), rgb(7,12,18)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to right, rgb(14,31,51), rgb(7,12,18)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to right, rgb(14,31,51), rgb(7,12,18)); /* For Firefox 3.6 to 15 */
+  background: url('./images/ich_blau_357x500.png') no-repeat 100px top fixed, linear-gradient(to right, rgb(14,31,51), rgb(7,12,18));
   text-align: center;
   color: #fff;
   padding-top: 110px;
@@ -64,19 +66,19 @@ p {
   letter-spacing: 2px;
   font-family: "Oswald", sans-serif;
 }
+#hero h1 {
+  font-size: 50px;
+  margin-top: 80px;
+  line-height: 1.3;
+}
 
-  #hero h1 {
-    font-size: 50px;
-    line-height: 1.3;
-  }
-
-    #hero h1 span {
-      font-size: 25px;
-      color: #ffffff;
-      border-bottom: 2px solid #ffffff;
-      padding-bottom: 12px;
-      line-height: 3;
-    }
+#hero h1 span {
+  font-size: 25px;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 12px;
+  line-height: 3;
+}
 
 .main_header {
   position: fixed;
@@ -97,6 +99,19 @@ p {
 @media only screen and (max-width: 766px) {
   .main_header {
     padding-top: 25px;
+    color:red;
+  }
+}
+
+@media only screen and (max-width: 366px){
+  #headerArrow{
+    margin-top: -10px;
+  }
+}
+
+@media only screen and (max-width: 1004px){
+  #hero {
+    background: url('./images/ich_blau_357x500.png') no-repeat left top fixed, linear-gradient(to right, rgb(14,31,51), rgb(7,12,18));
   }
 }
 
