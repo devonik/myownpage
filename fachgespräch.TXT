@@ -1,0 +1,12 @@
+Datenbank:
+
+Referienzielle Integrität:
+
+- No Action (Erflaubt alle Reinträge in die Datenbank) -- Integrität verletzt, da ein Wert nicht verfügbar sein kann
+
+- Cascade (Löscht alle Referienzielle Zuordnungen) -- Sehr gefährlich, da es alle Daten mit der Referenz lösche
+
+- Set Null (Setzte bei der Löschung einer Referenz den Wert Null) -- Integrität verletzt, da ein Wert nicht verfügbar ist
+
+- Ristrict (Gibt bei Löscheung einen Fehler, falls noch eine Referenz vorhanden ist) -- Sehr sicher
+
