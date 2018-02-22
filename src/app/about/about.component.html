@@ -15,7 +15,7 @@
       <div id="contactForm">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Konaktieren Sie mich</h2>
+                <h2>Kontaktieren Sie mich</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -29,7 +29,7 @@
                                    class="form-control"
                                    placeholder="Name*"
                                    name="username"
-                                   required minlength="2"
+                                   required minlength="3"
                                    [(ngModel)]="newMail.username" #username="ngModel">
 
                             <div *ngIf="username.invalid && (username.dirty || username.touched)"
@@ -39,7 +39,7 @@
                               Name muss gefüllt sein.
                             </div>
                             <div *ngIf="username.errors.minlength">
-                              Name muss mindestens 2 Buchstaben beinhalten.
+                              Name muss mindestens 3 Buchstaben beinhalten.
                             </div>
                           </div>
                         </div>
@@ -47,7 +47,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email Addresse</label>
-                            <input type="email" class="form-control" placeholder="Email Addresse*" [(ngModel)]="newMail.mailAdress" name="mailAdress" 
+                            <input type="email" class="form-control" placeholder="Email Adresse*" [(ngModel)]="newMail.mailAdress" name="mailAdress" 
                                    required [email]="true" #mailAdress="ngModel">
                           <div *ngIf="mailAdress.invalid && (mailAdress.dirty || mailAdress.touched)"
                                class="alert alert-danger">
