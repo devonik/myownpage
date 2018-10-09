@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, URLSearchParams } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs/Observable";
 import { NotificationsService } from 'angular2-notifications';
 
 @Injectable()
 export class MailService {
     
-    constructor(private http: Http, private _notfication: NotificationsService ) {}
+    constructor(private http: HttpClient, private _notfication: NotificationsService ) {}
 
     public sendMail(props) {
         const urlDev = "http://localhost:61155/api/mail/sendmail";
