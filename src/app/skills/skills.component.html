@@ -4,28 +4,30 @@
       <ngb-tabset [justify]="'justified'">
         <ngb-tab title="Frontend">
           <ng-template ngbTabContent>
-            <p><ngb-progressbar [value]="100">HTML5</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="100">JavaScript</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="100">JQuery</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="100">Angular</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="100">Typescript</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="100">CSS3</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="100">Bootstrap</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="80">AngularJs</ngb-progressbar></p>  
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="100">HTML5</ngb-progressbar></p>
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="100">JavaScript</ngb-progressbar></p>
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="100">VueJs</ngb-progressbar></p>  
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="90">CSS3</ngb-progressbar></p>
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="80">Angular</ngb-progressbar></p>
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="80">Typescript</ngb-progressbar></p>
+
+            <p><ngb-progressbar [value]="80">JQuery</ngb-progressbar></p>
+            <p><ngb-progressbar [value]="70">Bootstrap</ngb-progressbar></p>
           </ng-template>
         </ngb-tab>
         <ngb-tab title="Backend">
           <ng-template ngbTabContent>
-            <p><ngb-progressbar [value]="100">C# (.Net MVC)</ngb-progressbar></p>
             <p><ngb-progressbar [value]="100">Java (Spring Boot)</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="70">PHP</ngb-progressbar></p>  
+            <p><ngb-progressbar [value]="90">Java (Android)</ngb-progressbar></p>
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="90">PHP (Laravel)</ngb-progressbar></p>
+            <p><ngb-progressbar [value]="60">C# (.Net MVC)</ngb-progressbar></p>  
           </ng-template>
         </ngb-tab>
         <ngb-tab title="Datenbank">
           <ng-template ngbTabContent>
-            <p><ngb-progressbar [value]="100">MySql</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="90">MSSQL</ngb-progressbar></p>
-            <p><ngb-progressbar [value]="90">Pl/Sql</ngb-progressbar></p>
+            <p><ngb-progressbar [animated]="true" [striped]="true" [value]="100">MySql</ngb-progressbar></p>
+            <p><ngb-progressbar [value]="60">MSSQL</ngb-progressbar></p>
+            <p><ngb-progressbar [value]="30">Pl/Sql</ngb-progressbar></p>
           </ng-template>
         </ngb-tab>
       </ngb-tabset>
